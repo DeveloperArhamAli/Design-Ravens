@@ -194,7 +194,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <blockquote className="text-gray-600 mb-6">
-                "DesignCraft transformed our online presence with a stunning website that perfectly captures our brand.
+                "DesignRavens transformed our online presence with a stunning website that perfectly captures our brand.
                 Their team was professional, responsive, and delivered beyond our expectations."
               </blockquote>
               <div className="flex items-center">
@@ -217,7 +217,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <blockquote className="text-gray-600 mb-6">
-                "The logo design process was collaborative and enjoyable. DesignCraft took the time to understand our
+                "The logo design process was collaborative and enjoyable. DesignRavens took the time to understand our
                 vision and created a logo that has become the cornerstone of our brand identity."
               </blockquote>
               <div className="flex items-center">
@@ -240,7 +240,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <blockquote className="text-gray-600 mb-6">
-                "Working with DesignCraft on our brand identity was a game-changer for our business. Their strategic
+                "Working with DesignRavens on our brand identity was a game-changer for our business. Their strategic
                 approach and creative solutions helped us stand out in a competitive market."
               </blockquote>
               <div className="flex items-center">

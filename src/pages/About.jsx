@@ -1,4 +1,8 @@
 import { Users, Award, Coffee } from "lucide-react"
+import officeImg from "../assets/images/office-image.webp"
+import Person1 from "../assets/images/person1.jpeg"
+import Person2 from "../assets/images/peson2.jpeg"
+import Person3 from "../assets/images/person3.jpeg"
 
 const About = () => {
   return (
@@ -18,7 +22,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <img src="/placeholder.svg?height=400&width=500" alt="Our Team" className="rounded-lg shadow-lg" />
+              <img src={officeImg} alt="Our Team" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
@@ -101,7 +105,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <img
-                src="/placeholder.svg?height=300&width=300"
+                src={Person1}
                 alt="Team Member"
                 className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
               />
@@ -111,7 +115,7 @@ const About = () => {
 
             <div className="text-center">
               <img
-                src="/placeholder.svg?height=300&width=300"
+                src={Person2}
                 alt="Team Member"
                 className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
               />
@@ -121,7 +125,7 @@ const About = () => {
 
             <div className="text-center">
               <img
-                src="/placeholder.svg?height=300&width=300"
+                src={Person3}
                 alt="Team Member"
                 className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
               />
@@ -131,7 +135,7 @@ const About = () => {
 
             <div className="text-center">
               <img
-                src="/placeholder.svg?height=300&width=300"
+                src={Person1}
                 alt="Team Member"
                 className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
               />

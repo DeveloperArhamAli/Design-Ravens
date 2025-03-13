@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom"
 import { Monitor, Code, Smartphone, Zap, Search, ShieldCheck, ArrowRight, CheckCircle } from "lucide-react"
+import ecommerceImg from "../../assets/images/ecommerce.jpg"
+import restaurantImg from "../../assets/images/restorant.png"
+import blogImg from "../../assets/images/travel.jpeg"
 
 const WebDesign = () => {
   // Process steps
@@ -46,19 +49,19 @@ const WebDesign = () => {
   const featuredProjects = [
     {
       title: "Eco Friendly E-commerce",
-      image: "/placeholder.svg?height=600&width=800&text=Eco+Friendly",
+      image: ecommerceImg,
       category: "E-commerce",
       description: "A responsive e-commerce website for an eco-friendly product company.",
     },
     {
       title: "Restaurant Website",
-      image: "/placeholder.svg?height=600&width=800&text=Restaurant",
+      image: restaurantImg,
       category: "Business",
       description: "Elegant website design for an upscale restaurant.",
     },
     {
       title: "Travel Blog",
-      image: "/placeholder.svg?height=600&width=800&text=Travel+Blog",
+      image: blogImg,
       category: "Blog",
       description: "Visually engaging blog design for a travel enthusiast.",
     },

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Monitor, PenTool, Layout } from "lucide-react"
+import heroImg from "../assets/images/hero-img.jpeg"
 
 const Home = () => {
   return (
@@ -31,7 +32,7 @@ const Home = () => {
               </div>
             </div>
             <div className="md:w-1/2">
-              <img src="/placeholder.svg?height=400&width=500" alt="Design Showcase" className="rounded-lg shadow-xl" />
+              <img src={heroImg} alt="Design Showcase" className="rounded-lg shadow-xl" />
             </div>
           </div>
         </div>

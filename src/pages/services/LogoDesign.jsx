@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { PenTool, Layers, Palette, RefreshCw, Award, Target, ArrowRight, CheckCircle } from "lucide-react"
+import logoDesignImage from "../../assets/images/logo-designing-image.jpg"
 
 const LogoDesign = () => {
   // Process steps
@@ -93,7 +94,7 @@ const LogoDesign = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/placeholder.svg?height=400&width=500&text=Logo+Design"
+                src={logoDesignImage}
                 alt="Logo Design Showcase"
                 className="rounded-lg shadow-xl"
               />

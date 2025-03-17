@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Monitor, PenTool, Layout } from "lucide-react"
 import heroImg from "../assets/images/hero-img.jpeg"
+import ServiceCard from "../components/ServiceCard"
+import WhyChooseUsCard from "../components/WhyChooseUsCard"
 
 const Home = () => {
   return (
@@ -49,38 +51,12 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-blue-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Monitor className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Web Design</h3>
-              <p className="text-gray-600 mb-4">
-                Beautiful, responsive websites that engage your visitors and convert them into customers.
-              </p>
-              <Link to="/services" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<Monitor className="text-blue-600 w-12 h-12 mb-4" />} heading="Web Design" description="Design Ravens crafts visually stunning, user-friendly, and SEO-optimized custom websites tailored to your business needs." />
 
-            <div className="bg-blue-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <PenTool className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Logo Design</h3>
-              <p className="text-gray-600 mb-4">
-                Memorable logos that capture your brand's essence and make a lasting impression.
-              </p>
-              <Link to="/services" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<PenTool className="text-blue-600 w-12 h-12 mb-4" />} heading="Logo Design" description="Design Ravens delivers top-tier logo design and branding services, crafting unique identities that reflect clients' values and vision for lasting success." />
+            
+            <ServiceCard icon={<Layout className="text-blue-600 w-12 h-12 mb-4" />} heading="Digital Marketing" description="Design Ravens crafts tailored digital marketing strategies, leveraging SEO, PPC, social media, and more to maximize online visibility, engagement, and revenue growth." />
 
-            <div className="bg-blue-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Layout className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Brand Identity</h3>
-              <p className="text-gray-600 mb-4">
-                Cohesive brand identities that communicate your values and connect with your audience.
-              </p>
-              <Link to="/services" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
           </div>
 
           <div className="text-center mt-12">
@@ -106,53 +82,15 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Expert Designers</h3>
-                  <p className="text-gray-600">
-                    Our team consists of experienced designers who are passionate about creating stunning visuals.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Tailored Solutions</h3>
-                  <p className="text-gray-600">
-                    We create custom designs that align with your brand identity and business objectives.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <WhyChooseUsCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Expert Designers" description="Our team consists of experienced designers who are passionate about creating stunning visuals." />
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Timely Delivery</h3>
-                  <p className="text-gray-600">
-                    We value your time and ensure that all projects are completed within the agreed timeframe.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <WhyChooseUsCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Tailored Solutions" description="We create custom designs that align with your brand identity and business objectives." />
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Affordable Pricing</h3>
-                  <p className="text-gray-600">
-                    We offer competitive pricing without compromising on the quality of our work.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <WhyChooseUsCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Timely Delivery" description="We value your time and ensure that all projects are completed within the agreed timeframe." />
+
+            <WhyChooseUsCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Affordable Pricing" description="We offer competitive pricing without compromising on the quality of our work." />
+
           </div>
         </div>
       </section>

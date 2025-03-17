@@ -1,69 +1,56 @@
 import { Link } from "react-router-dom"
-import { Monitor, Code, Smartphone, Zap, Search, ShieldCheck, ArrowRight, CheckCircle } from "lucide-react"
+import { CheckCircle, Laptop, ShoppingCart, Rocket } from "lucide-react"
 import ecommerceImg from "../../assets/images/ecommerce.jpg"
 import restaurantImg from "../../assets/images/restorant.png"
 import blogImg from "../../assets/images/travel.jpeg"
+import webDesignImage from "../../assets/images/web-design-image.jpg"
+import ServiceCard from "../../components/ServiceCard"
+import ProcessCard from "../../components/ProcessCard"
+import AutoImageSlider from "../../components/AutoImageSlider"
+import image1 from "../../assets/images/image1.jpg"
+import image2 from "../../assets/images/image2.jpg"
+import image3 from "../../assets/images/image3.jpg"
+import image4 from "../../assets/images/image4.jpg"
+import image5 from "../../assets/images/image5.jpg"
+import image6 from "../../assets/images/image6.jpg"
+import image7 from "../../assets/images/image7.jpg"
+import image8 from "../../assets/images/image8.jpg"
+import image9 from "../../assets/images/image9.jpg"
+import image10 from "../../assets/images/image10.jpg"
+import BenefitsOfWebDesignCard from "../../components/BenefitsOfWebDesignCard"
 
 const WebDesign = () => {
-  // Process steps
-  const processSteps = [
-    {
-      number: "01",
-      title: "Discovery",
-      description:
-        "We start by understanding your business, goals, target audience, and competitors to ensure our design aligns with your objectives.",
-    },
-    {
-      number: "02",
-      title: "Planning & Wireframing",
-      description:
-        "We create the blueprint for your website, mapping out the user journey and information architecture to ensure optimal user experience.",
-    },
-    {
-      number: "03",
-      title: "Design",
-      description:
-        "Our designers create visually stunning mockups that align with your brand identity and appeal to your target audience.",
-    },
-    {
-      number: "04",
-      title: "Development",
-      description:
-        "We transform the designs into a fully functional website, ensuring it's responsive, fast, and user-friendly across all devices.",
-    },
-    {
-      number: "05",
-      title: "Testing & Launch",
-      description:
-        "We thoroughly test the website for functionality, usability, and performance before launching it to the world.",
-    },
-    {
-      number: "06",
-      title: "Support & Maintenance",
-      description:
-        "We provide ongoing support and maintenance to ensure your website continues to perform optimally and stays up-to-date.",
-    },
-  ]
 
-  // Featured projects
-  const featuredProjects = [
+  const portfolioItems = [
     {
-      title: "Eco Friendly E-commerce",
-      image: ecommerceImg,
-      category: "E-commerce",
-      description: "A responsive e-commerce website for an eco-friendly product company.",
+      image: image1,
     },
     {
-      title: "Restaurant Website",
-      image: restaurantImg,
-      category: "Business",
-      description: "Elegant website design for an upscale restaurant.",
+      image: image2,
     },
     {
-      title: "Travel Blog",
-      image: blogImg,
-      category: "Blog",
-      description: "Visually engaging blog design for a travel enthusiast.",
+      image: image3,
+    },
+    {
+      image: image4,
+    },
+    {
+      image: image5,
+    },
+    {
+      image: image6,
+    },
+    {
+      image: image7,
+    },
+    {
+      image: image8,
+    },
+    {
+      image: image9,
+    },
+    {
+      image: image10,
     },
   ]
 
@@ -98,7 +85,7 @@ const WebDesign = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/placeholder.svg?height=400&width=500&text=Web+Design"
+                src={webDesignImage}
                 alt="Web Design Showcase"
                 className="rounded-lg shadow-xl"
               />
@@ -118,72 +105,13 @@ const WebDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Monitor className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Custom Website Design</h3>
-              <p className="text-gray-600 mb-4">
-                Unique, tailored website designs that reflect your brand identity and resonate with your target
-                audience.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Smartphone className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Responsive Design</h3>
-              <p className="text-gray-600 mb-4">
-                Websites that look and function perfectly on all devices, from desktops to smartphones.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<Laptop className="text-blue-600 w-12 h-12 mb-4" />} heading="Stunning Web Design" description="We create visually appealing websites that captivate users and enhance your brand’s online presence." />
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Code className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">E-commerce Websites</h3>
-              <p className="text-gray-600 mb-4">
-                User-friendly online stores that provide seamless shopping experiences and drive sales.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<ShoppingCart className="text-blue-600 w-12 h-12 mb-4" />} heading="E-Commerce Solutions" description="Build seamless, high-performing online stores designed for smooth shopping experiences." />
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Zap className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Website Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                Performance optimization to ensure your website loads quickly and provides a smooth user experience.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<Rocket className="text-blue-600 w-12 h-12 mb-4" />} heading="SEO-Optimized Websites" description="Our websites are built to rank higher on search engines, driving more traffic and growth." />
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Search className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">SEO-Friendly Design</h3>
-              <p className="text-gray-600 mb-4">
-                Websites built with search engine optimization in mind to improve your visibility online.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <ShieldCheck className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Website Maintenance</h3>
-              <p className="text-gray-600 mb-4">
-                Ongoing support and maintenance to keep your website secure, up-to-date, and performing optimally.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -200,19 +128,13 @@ const WebDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 text-blue-600 text-2xl font-bold rounded-lg px-4 py-2 mr-4">
-                    {step.number}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-800">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+            <ProcessCard stepNumber="01" stepTitle="Initial Phase" stepDescription="We define goals, research the market, set timelines, and allocate roles to ensure a smooth project execution." />
+
+            <ProcessCard stepNumber="02" stepTitle="Execution" stepDescription="We brainstorm ideas, define key features, and ensure a seamless user experience, collaborating closely to meet all project requirements." />
+
+            <ProcessCard stepNumber="03" stepTitle="Delivery" stepDescription="We ensure timely delivery with thorough testing, client approval, and post-launch support for seamless operation." />
+
           </div>
         </div>
       </section>
@@ -227,38 +149,10 @@ const WebDesign = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-md">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6">
-                    <span className="inline-block bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded mb-2">
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-blue-100 mb-4">{project.description}</p>
-                    <Link to="/portfolio" className="text-white font-medium inline-flex items-center">
-                      View Project <ArrowRight size={16} className="ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+            <div className="my-12">
+              <AutoImageSlider items={portfolioItems} />
+            </div>
 
-          <div className="text-center mt-12">
-            <Link
-              to="/portfolio"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium inline-block transition-colors"
-            >
-              View All Web Design Projects
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -273,54 +167,15 @@ const WebDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Enhanced Brand Credibility</h3>
-                  <p className="text-gray-600">
-                    A professional website builds trust with your audience and establishes your brand as credible and
-                    reliable.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Improved User Experience</h3>
-                  <p className="text-gray-600">
-                    Intuitive navigation and thoughtful design create a positive experience that keeps visitors engaged.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Enhanced Brand Credibility" description="A professional website builds trust with your audience and establishes your brand as credible and reliable." />
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Higher Conversion Rates</h3>
-                  <p className="text-gray-600">
-                    Strategic design elements guide visitors toward desired actions, increasing conversion rates.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Improved User Experience" description="Intuitive navigation and thoughtful design create a positive experience that keeps visitors engaged." />
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Better Search Engine Rankings</h3>
-                  <p className="text-gray-600">
-                    SEO-friendly design helps improve your visibility in search results, driving more organic traffic.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Higher Conversion Rates" description="Strategic design elements guide visitors toward desired actions, increasing conversion rates." />
+
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Better Search Engine Rankings" description="SEO-friendly design helps improve your visibility in search results, driving more organic traffic." />
+            
           </div>
         </div>
       </section>

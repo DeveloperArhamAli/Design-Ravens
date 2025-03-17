@@ -1,7 +1,515 @@
 import { Link } from "react-router-dom"
 import { Check } from "lucide-react"
+import { useState } from "react"
+import PricingComponent from "../components/PricingComponent"
 
 const Pricing = () => {
+
+  const categories = ["Web Design", "Logo Design", "Branding", "Logo + Branding", "Logo + Branding + Website"]
+  const [activeFilter, setActiveFilter] = useState("Web Design")
+
+    const packages = [
+      {
+        id: 1,
+        heading: "HTML",
+        category: "Web Design",
+        price: "499",
+        description: "5 page static website",
+        features: [
+          "Jquery Slider Banner",
+          "W3C Certified HTML",
+          "UI Design",
+          "3 Banner Design",
+          "Favicon",
+          "SEO Friendly Design"
+        ]
+      },
+      {
+        id: 2,
+        heading: "CMS",
+        category: "Web Design",
+        price: "999",
+        description: "5 page dynamic website",
+        features: [
+          "Web Development",
+          "W3C Certified HTML",
+          "Web Design & UI",
+          "10 Stock Images",
+          "5 Banner Designs",
+          "Advance UI Effects",
+          "SEO Friendly Design",
+          "SEO Friendly Sitemap",
+          "On Page Optimization",
+          "Social Media Integration",
+          "4 Social Platforms"
+        ]
+      },
+      {
+        id: 3,
+        heading: "E-Commerce",
+        category: "Web Design",
+        price: "1999",
+        description: "Unlimited Pages",
+        features: [
+          "Web Development",
+          "W3C Certified HTML",
+          "Admin Panel Support",
+          "Mobile Responsive Layout",
+          "Customers Login Area",
+          "Cart Integration",
+          "Pay Module Integration",
+          "Inventory Mangement",
+          "Unlimited Products & Categories",
+          "Easy Product Search",
+          "Product Reviews",
+          "Web Design & UI",
+          "15 Stock Images",
+          "8 Banner Designs",
+          "Favicon",
+          "Advance UI Effects",
+          "Basic Search Engine Submission",
+          "SEO Friendly Design",
+          "SEO Friendly Sitemap",
+          "Analytics Integration",
+          "On Page Optimization",
+          "Social Media Integration",
+          "4 Social Platforms"
+        ]
+      },
+      {
+        id: 4,
+        heading: "Portal",
+        category: "Web Design",
+        price: "3999",
+        description: "Any Pages",
+        features: [
+          "Web Development",
+          "Admin Panel Support",
+          "Job Portal",
+          "Professional Network",
+          "Social Network",
+          "Media Portal",
+          "Real Estate Portal",
+          "Medical Portal",
+          "News Portal",
+          "Enterprise Portal",
+          "Client/User Dashboard",
+          "Custom Coding",
+          "Module-wise Architecture",
+          "Extensive Admin Panel",
+          "Complete Deployment",
+        ]
+      },
+      {
+        id: 5,
+        heading: "Basic",
+        category: "Logo Design",
+        price: "49",
+        description: "2 logo concepts",
+        features: [
+          "By 1 Experienced Designer",
+          "4 Free Revisions",
+          "Dedicated Project Manager",
+          "24 – 48 Hours Delivery",
+          "1 Finalized Logo",
+          "100% Ownership",
+          "No Print-Ready PDF File",
+          "No Vector EPS File",
+          "No Editable Vector AI File",
+        ]
+      },
+      {
+        id: 6,
+        heading: "Proffesional",
+        category: "Logo Design",
+        price: "99",
+        description: "4 logo concepts",
+        features: [
+          "By 3 Experienced Designer",
+          "8 Free Revisions",
+          "Dedicated Project Manager",
+          "24 – 48 Hours Delivery",
+          "1 Finalized Logo",
+          "100% Ownership",
+          "Online JPEG & PNG Files",
+          "Print-Ready PDF File",
+          "No Vector EPS File",
+          "No Editable Vector AI File",
+        ]
+      },
+      {
+        id: 7,
+        heading: "Premium",
+        category: "Logo Design",
+        price: "149",
+        description: "6 logo concepts",
+        features: [
+          "By 5 Experienced Designer",
+          "Unlimited Revisions",
+          "Dedicated Project Manager",
+          "24 – 48 Hours Delivery",
+          "1 Finalized Logo",
+          "100% Ownership",
+          "Online JPEG & PNG Files",
+          "Print-Ready PDF File",
+          "Vector EPS File",
+          "No Editable Vector AI File",
+        ]
+      },
+      {
+        id: 8,
+        heading: "Deluxe",
+        category: "Logo Design",
+        price: "199",
+        description: "Unlimited logo concepts",
+        features: [
+          "By 8 Experienced Designer",
+          "Unlimited Revisions",
+          "Dedicated Project Manager",
+          "24 – 48 Hours Delivery",
+          "1 Finalized Logo",
+          "100% Ownership",
+          "Online JPEG & PNG Files",
+          "Print-Ready PDF File",
+          "Vector EPS File",
+          "Editable Vector AI File",
+        ]
+      },
+      {
+        id: 9,
+        heading: "Startup",
+        category: "Branding",
+        price: "99",
+        description: "Branding Kit",
+        features: [
+          "Business Card Design",
+          "Letter head Design",
+          "Envelope Design",
+          "MS Word Letterhead",
+          "Email Signature Design",
+          "Invoice Design",
+          "Facebook Banner Design",
+          "Youtube Banner Design",
+          "Twitter Banner Design",
+          "Linkedin Banner Design",
+          "Logo Watermark"
+        ]
+      },
+      {
+        id: 10,
+        heading: "Professional",
+        category: "Branding",
+        price: "139 ",
+        description: "Branding Kit",
+        features: [
+          "Business Card Design",
+          "Letter head Design",
+          "Envelope Design",
+          "MS Word Letterhead",
+          "Email Signature Design",
+          "Invoice Design",
+          "Facebook Banner Design",
+          "Youtube Banner Design",
+          "Twitter Banner Design",
+          "Linkedin Banner Design",
+          "Logo Watermark",
+          "Favicon Design",
+          "Polo/T-Shirt Design",
+          "Cap/Hat Design"
+        ]
+      },
+      {
+        id: 11,
+        heading: "Corporate",
+        category: "Branding",
+        price: "249 ",
+        description: "Branding Kit",
+        features: [
+          "Business Card Design",
+          "Letter head Design",
+          "Envelope Design",
+          "MS Word Letterhead",
+          "Email Signature Design",
+          "Invoice Design",
+          "Facebook Banner Design",
+          "Youtube Banner Design",
+          "Twitter Banner Design",
+          "Linkedin Banner Design",
+          "Logo Watermark",
+          "Favicon Design",
+          "Polo/T-Shirt Design",
+          "Cap/Hat Design",
+          "Bag Design",
+          "Signage Design",
+          "Flyer Design"
+        ]
+      },
+      {
+        id: 12,
+        heading: "Ultimate",
+        category: "Branding",
+        price: "299 ",
+        description: "Branding Kit",
+        features: [
+          "Business Card Design",
+          "Letter head Design",
+          "Envelope Design",
+          "MS Word Letterhead",
+          "Email Signature Design",
+          "Invoice Design",
+          "Facebook Banner Design",
+          "Youtube Banner Design",
+          "Twitter Banner Design",
+          "Linkedin Banner Design",
+          "Logo Watermark",
+          "Favicon Design",
+          "Polo/T-Shirt Design",
+          "Cap/Hat Design",
+          "Bag Design",
+          "Signage Design",
+          "Flyer Design",
+          "Car Wrap/Vinyl Design",
+          "PPT Design",
+          "Magnet Design",
+          "Door Sign Design",
+          "Menu Design",
+          "Mug/Cup Design"
+        ]
+      },
+      {
+        id: 13,
+        heading: "Basic",
+        category: "Logo + Branding",
+        price: "89",
+        description: "Basic Logo | Startup Branding",
+        features: [
+          "2 Logo Concepts",
+          "3 Revisions",
+          "No High Resolution files",
+          "48 hours Delivery",
+          "100% Ownership",
+          "JPG + PNG",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+        ]
+      },
+      {
+        id: 14,
+        heading: "Professional",
+        category: "Logo + Branding",
+        price: "219",
+        description: "Professional Logo | Corporate Branding",
+        features: [
+          "4 Logo Concepts",
+          "6 Revisions",
+          "Custom Logo",
+          "Vector PDF File",
+          "48 hours Delivery",
+          "100% Ownership",
+          "JPG + PDF + PNG",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "Email Signature",
+          "2 Social Covers",
+          "T-Shirt Design",
+          "Web Banner Design"
+        ]
+      },
+      {
+        id: 15,
+        heading: "Corporate",
+        category: "Logo + Branding",
+        price: "299",
+        description: "Premium Logo | Ultimate Branding",
+        features: [
+          "6 Logo Concepts",
+          "Unlimited Revisions",
+          "Custom Logo",
+          "Vector PDF File",
+          "24-48 hours Delivery",
+          "100% Ownership",
+          "JPG + PDF + PNG + EPS",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "Email Signature",
+          "4 Social Covers",
+          "T-Shirt Design",
+          "Web Banner Design",
+          "Signage Design",
+          "Car Stickers Design"
+        ]
+      },
+      {
+        id: 16,
+        heading: "Ultimate",
+        category: "Logo + Branding",
+        price: "599",
+        description: "Deluxe Logo | Ultimate Branding",
+        features: [
+          "Unlimited Logo Concepts",
+          "Unlimited Revisions",
+          "Custom Logo",
+          "Editable Vector Ai",
+          "Vector EPS, PDF",
+          "24-48 hours Delivery",
+          "100% Ownership",
+          "JPG + PDF + PNG + EPS + AI",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "Email Signature",
+          "4 Social Covers",
+          "T-Shirt Design",
+          "Web Banner Design",
+          "Signage Design",
+          "Car Stickers Design"
+        ]
+      },
+      {
+        id: 17,
+        heading: "Basic",
+        category: "Logo + Branding + Website",
+        price: "499",
+        description: "Professional Logo | Startup Branding | 1 Page HTML",
+        features: [
+          "4 Logo Concepts",
+          "6 Revisions",
+          "Custom Logo",
+          "Vector PDF File",
+          "48 hours Delivery",
+          "JPG + PDF + PNG",
+          "100% Ownership",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "1 page static website",
+          "Jquery Slider Banner",
+          "W3C Certified HTML",
+          "UI Design",
+          "3 Banner Design",
+          "Favicon",
+          "SEO Friendly Design"
+        ]
+      },
+      {
+        id: 18,
+        heading: "Professional",
+        category: "Logo + Branding + Website",
+        price: "699",
+        description: "Premium Logo | Professional Branding | HTML Website",
+        features: [
+          "6 Logo Concepts",
+          "Unlimited Revisions",
+          "Custom Logo",
+          "Vector EPS , PDF file",
+          "24-48 hours Delivery",
+          "JPG + PDF + PNG + EPS",
+          "100% Ownership",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "Email Signature",
+          "2 Social Covers",
+          "5 page static website",
+          "Jquery Slider Banner",
+          "W3C Certified HTML",
+          "UI Design",
+          "3 Banner Design",
+          "Favicon",
+          "SEO Friendly Design"
+        ]
+      },
+      {
+        id: 19,
+        heading: "Corporate",
+        category: "Logo + Branding + Website",
+        price: "1299",
+        description: "Deluxe Logo | Corporate Branding | CMS Website",
+        features: [
+          "Unlimited Logo Concepts",
+          "Unlimited Revisions",
+          "Custom Logo",
+          "Editable Vector Ai",
+          "Vector EPS , PDF file",
+          "24-48 hours Delivery",
+          "JPG + PDF + PNG + EPS + AI",
+          "100% Ownership",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "Email Signature",
+          "2 Social Covers",
+          "T-Shirt Design",
+          "Web Banner Design",
+          "5 page dynamic website",
+          "Web Development",
+          "W3C Certified HTML",
+          "Web Design & UI",
+          "10 Stock Images",
+          "5 Banner Designs",
+          "Advance UI Effects",
+          "SEO Friendly Design",
+          "SEO Friendly Sitemap",
+          "On Page Optimization",
+          "Social Media Integration",
+          "4 Social Platforms"
+        ]
+      },
+      {
+        id: 20,
+        heading: "Ultimate",
+        category: "Logo + Branding + Website",
+        price: "1999",
+        description: "Deluxe Logo | Ultimate Branding | E-Commerce Website",
+        features: [
+          "Unlimited Logo Concepts",
+          "Unlimited Revisions",
+          "Custom Logo",
+          "Editable Vector Ai",
+          "Vector EPS , PDF file",
+          "24-48 hours Delivery",
+          "JPG + PDF + PNG + EPS + AI",
+          "100% Ownership",
+          "Business Card Design",
+          "Letterhead Design",
+          "Envelope Design",
+          "Email Signature",
+          "4 Social Covers",
+          "T-Shirt Design",
+          "Web Banner Design",
+          "Signage Design",
+          "Car Stickers Design",
+          "Web Development",
+          "W3C Certified HTML",
+          "Admin Panel Support",
+          "Mobile Responsive Layout",
+          "Customers Login Area",
+          "Cart Integration",
+          "Pay. Module Integration",
+          "Inventory Mangement",
+          "Unlimited Products & Categories",
+          "Easy Product Search",
+          "Web Design & UI",
+          "15 Stock Images",
+          "8 Banner Designs",
+          "Favicon",
+          "Advance UI Effects",
+          "Basic Search Engine Submission",
+          "SEO Friendly Design",
+          "SEO Friendly Sitemap",
+          "Analytics Integration",
+          "On Page Optimization",
+          "Social Media Integration",
+          "4 Social Platforms"
+        ]
+      },
+    ]
+
+    const filteredProjects = packages.filter((pkg) => pkg.category === activeFilter)
+
   return (
     <div>
       {/* Hero Section */}
@@ -15,7 +523,7 @@ const Pricing = () => {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Choose Your Plan</h2>
@@ -24,133 +532,18 @@ const Pricing = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Basic Plan */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden transition-all hover:shadow-lg">
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Basic</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-800">$499</span>
-                  <span className="text-gray-600">/project</span>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Perfect for small businesses just getting started with their branding.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Logo design (2 concepts)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Basic website (up to 5 pages)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Business card design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">1 round of revisions</span>
-                  </li>
-                </ul>
-                <Link
-                  to="/contact"
-                  className="block w-full bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 text-center py-3 rounded-md font-medium transition-colors"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category, index) => (
+              <button key={index} onClick={() => setActiveFilter(category)} className={`px-6 py-2 rounded-full font-medium transition-colors ${activeFilter === category ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>{category}</button>
+            ))}
+          </div>
 
-            {/* Pro Plan */}
-            <div className="border-2 border-blue-600 rounded-lg overflow-hidden shadow-lg relative">
-              <div className="bg-blue-600 text-white text-center py-2 text-sm font-medium">MOST POPULAR</div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Professional</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-800">$999</span>
-                  <span className="text-gray-600">/project</span>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Ideal for established businesses looking to enhance their brand presence.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Logo design (4 concepts)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Custom website (up to 10 pages)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Complete stationery design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Social media kit</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">2 rounds of revisions</span>
-                  </li>
-                </ul>
-                <Link
-                  to="/contact"
-                  className="block w-full bg-blue-600 text-white hover:bg-blue-700 text-center py-3 rounded-md font-medium transition-colors"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mx-auto">
 
-            {/* Enterprise Plan */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden transition-all hover:shadow-lg">
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Enterprise</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-800">$1,999</span>
-                  <span className="text-gray-600">/project</span>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Comprehensive solution for businesses requiring a complete brand overhaul.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Logo design (6 concepts)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Premium website (unlimited pages)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Complete brand identity package</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Marketing collateral design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Brand guidelines document</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="text-blue-600 w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600">Unlimited revisions</span>
-                  </li>
-                </ul>
-                <Link
-                  to="/contact"
-                  className="block w-full bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 text-center py-3 rounded-md font-medium transition-colors"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
+            {filteredProjects.map((filteredPkg) => (
+              <PricingComponent name={filteredPkg.heading} price={filteredPkg.price} description={filteredPkg.description} features={filteredPkg.features} key={filteredPkg.id} />
+            ))}
+
           </div>
         </div>
       </section>
@@ -168,67 +561,8 @@ const Pricing = () => {
               to="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium inline-block transition-colors"
             >
-              Contact for Custom Quote
+              Contact
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our pricing and services.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">How long does a typical project take?</h3>
-                <p className="text-gray-600">
-                  Project timelines vary depending on complexity and scope. A basic logo design might take 1-2 weeks,
-                  while a comprehensive website could take 4-8 weeks. We'll provide a detailed timeline during our
-                  initial consultation.
-                </p>
-              </div>
-
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Do you offer payment plans?</h3>
-                <p className="text-gray-600">
-                  Yes, we offer flexible payment plans for larger projects. Typically, we require a 50% deposit to begin
-                  work, with the remaining balance due upon completion. For enterprise projects, we can arrange
-                  milestone-based payments.
-                </p>
-              </div>
-
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">What if I'm not satisfied with the designs?</h3>
-                <p className="text-gray-600">
-                  Client satisfaction is our priority. Each package includes a specified number of revision rounds. If
-                  you're still not satisfied after these revisions, we can discuss additional changes at an hourly rate.
-                </p>
-              </div>
-
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Do you offer ongoing support?</h3>
-                <p className="text-gray-600">
-                  Yes, we provide 30 days of support after project completion for any minor adjustments or questions.
-                  For ongoing support and maintenance, we offer monthly retainer packages that can be customized to your
-                  needs.
-                </p>
-              </div>
-
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Can I upgrade my package later?</h3>
-                <p className="text-gray-600">
-                  You can upgrade to a higher-tier package at any time. We'll simply charge the difference between your
-                  current package and the upgraded one, making the transition seamless.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

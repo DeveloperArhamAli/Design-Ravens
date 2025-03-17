@@ -64,7 +64,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800">Our Location</h3>
-                    <p className="text-gray-600">123 Design Street, Creative City, 10001</p>
+                    <p className="text-gray-600">2437 Sonoma, Baton Rouge, LA, United States, Louisiana</p>
                   </div>
                 </div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800">Email Us</h3>
-                    <p className="text-gray-600">info@DesignRavens.com</p>
+                    <a href="mailto:info@designravens.com"><p className="text-gray-600">info@designravens.com</p></a>
                   </div>
                 </div>
 
@@ -84,17 +84,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800">Call Us</h3>
-                    <p className="text-gray-600">(123) 456-7890</p>
+                    <a href="tel:+15512615233"><p className="text-gray-600">+1 551 261 5233</p></a>
                   </div>
-                </div>
-              </div>
-
-              <div className="mt-12">
-                <h3 className="text-xl font-bold mb-4 text-gray-800">Business Hours</h3>
-                <div className="space-y-2 text-gray-600">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </div>
@@ -149,25 +140,17 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                      Service You're Interested In *
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                      Subject *
                     </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    >
-                      <option value="">Select a service</option>
-                      <option value="web-design">Web Design</option>
-                      <option value="logo-design">Logo Design</option>
-                      <option value="brand-identity">Brand Identity</option>
-                      <option value="ui-ux">UI/UX Design</option>
-                      <option value="web-development">Web Development</option>
-                      <option value="other">Other</option>
-                    </select>
+                    />
                   </div>
 
                   <div>
@@ -194,38 +177,6 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-20 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Find Us</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Visit our office to meet our team and discuss your project in person.
-            </p>
-          </div>
-          <div className="h-96 bg-gray-200 rounded-lg overflow-hidden">
-            {/* In a real application, you would embed a Google Map here */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-300">
-              <p className="text-gray-600">Map would be embedded here</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Create Something Amazing Together</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-            Whether you have a specific project in mind or need guidance, we're here to help you achieve your design
-            goals.
-          </p>
-          <div className="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-medium">
-            Call us: (123) 456-7890
           </div>
         </div>
       </section>

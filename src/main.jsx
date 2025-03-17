@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         element: <WebDesign />
       },
       {
-        path: "/services/logo-design",
+        path: "/services/logo-and-branding",
         element: <LogoDesign />
       },
       {

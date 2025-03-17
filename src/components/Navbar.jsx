@@ -87,7 +87,7 @@ const Navbar = () => {
                     <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
                       <div className="py-1">
                         <Link to="/services/web-design" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Web Design</Link>
-                        <Link to="/services/logo-design" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Logo and Branding</Link>
+                        <Link to="/services/logo-and-branding" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Logo and Branding</Link>
                       </div>
                     </div>
                   )}

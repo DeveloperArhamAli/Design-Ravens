@@ -1,43 +1,53 @@
 import { Link } from "react-router-dom"
-import { PenTool, Layers, Palette, RefreshCw, Award, Target, ArrowRight, CheckCircle } from "lucide-react"
+import { PenTool, Layers, Palette, RefreshCw, Award, Target, ArrowRight, CheckCircle, Brush, Rocket } from "lucide-react"
 import logoDesignImage from "../../assets/images/logo-designing-image.jpg"
+import ServiceCard from "../../components/ServiceCard"
+import ProcessCard from "../../components/ProcessCard"
+import AutoImageSlider from "../../components/AutoImageSlider"
+import image1 from "../../assets/images/image1.jpg"
+import image2 from "../../assets/images/image2.jpg"
+import image3 from "../../assets/images/image3.jpg"
+import image4 from "../../assets/images/image4.jpg"
+import image5 from "../../assets/images/image5.jpg"
+import image6 from "../../assets/images/image6.jpg"
+import image7 from "../../assets/images/image7.jpg"
+import image8 from "../../assets/images/image8.jpg"
+import image9 from "../../assets/images/image9.jpg"
+import image10 from "../../assets/images/image10.jpg"
+import BenefitsOfWebDesignCard from "../../components/BenefitsOfWebDesignCard"
 
 const LogoDesign = () => {
-  // Process steps
-  const processSteps = [
+
+  const portfolioItems = [
     {
-      number: "01",
-      title: "Discovery",
-      description:
-        "We start by understanding your brand values, target audience, and competitors to ensure your logo aligns with your brand identity.",
+      image: image1,
     },
     {
-      number: "02",
-      title: "Research",
-      description:
-        "We conduct thorough research on industry trends, color psychology, and design principles to inform our creative process.",
+      image: image2,
     },
     {
-      number: "03",
-      title: "Concept Development",
-      description: "Our designers create multiple logo concepts based on our research and your requirements.",
+      image: image3,
     },
     {
-      number: "04",
-      title: "Refinement",
-      description:
-        "Based on your feedback, we refine the chosen concept, making adjustments until it perfectly matches your vision.",
+      image: image4,
     },
     {
-      number: "05",
-      title: "Finalization",
-      description: "We finalize the logo design and prepare all necessary file formats for different applications.",
+      image: image5,
     },
     {
-      number: "06",
-      title: "Delivery & Support",
-      description:
-        "We deliver the final logo package and provide guidelines for proper usage across different platforms.",
+      image: image6,
+    },
+    {
+      image: image7,
+    },
+    {
+      image: image8,
+    },
+    {
+      image: image9,
+    },
+    {
+      image: image10,
     },
   ]
 
@@ -71,7 +81,7 @@ const LogoDesign = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Logo Design That Makes a Lasting Impression
+                Logo Design and Branding
               </h1>
               <p className="text-xl mb-8 text-blue-100">
                 We create memorable, versatile logos that capture your brand's essence and help you stand out in a
@@ -114,71 +124,13 @@ const LogoDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <PenTool className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Custom Logo Design</h3>
-              <p className="text-gray-600 mb-4">
-                Unique, tailored logo designs that reflect your brand identity and resonate with your target audience.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Layers className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Logo Variations</h3>
-              <p className="text-gray-600 mb-4">
-                Multiple logo variations for different applications, from social media profiles to large-scale signage.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<Brush className="text-blue-600 w-12 h-12 mb-4" />} heading="Logo Design" description="Crafting unique and memorable logos that represent your brand’s identity." />
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Palette className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Color Psychology</h3>
-              <p className="text-gray-600 mb-4">
-                Strategic color selection based on color psychology to evoke the right emotions and associations.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<Palette className="text-blue-600 w-12 h-12 mb-4" />} heading="Branding Strategy" description="Creating a cohesive brand identity that aligns with your values and objectives." />
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <RefreshCw className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Logo Redesign</h3>
-              <p className="text-gray-600 mb-4">
-                Refresh and modernize your existing logo while maintaining brand recognition and equity.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
+            <ServiceCard icon={<Rocket className="text-blue-600 w-12 h-12 mb-4" />} heading="Business Growth" description="Helping businesses stand out and build a foundation for long-term success." />
 
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Award className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Logo Guidelines</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive guidelines for logo usage to ensure consistency across all brand touchpoints.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg">
-              <Target className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Industry-Specific Design</h3>
-              <p className="text-gray-600 mb-4">
-                Logos tailored to your specific industry that communicate your expertise and professionalism.
-              </p>
-              <Link to="/contact" className="text-blue-600 font-medium inline-flex items-center">
-                Learn more <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -194,19 +146,13 @@ const LogoDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 text-blue-600 text-2xl font-bold rounded-lg px-4 py-2 mr-4">
-                    {step.number}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-800">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+            <ProcessCard stepNumber="01" stepTitle="Initial Phase" stepDescription="We define goals, research the market, set timelines, and allocate roles to ensure a smooth project execution." />
+
+            <ProcessCard stepNumber="02" stepTitle="Execution" stepDescription="We brainstorm ideas, define key features, and ensure a seamless user experience, collaborating closely to meet all project requirements." />
+
+            <ProcessCard stepNumber="03" stepTitle="Delivery" stepDescription="We ensure timely delivery with thorough testing, client approval, and post-launch support for seamless operation." />
+
           </div>
         </div>
       </section>
@@ -221,37 +167,8 @@ const LogoDesign = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-md">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6">
-                    <span className="inline-block bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded mb-2">
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-blue-100 mb-4">{project.description}</p>
-                    <Link to="/portfolio" className="text-white font-medium inline-flex items-center">
-                      View Project <ArrowRight size={16} className="ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/portfolio"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium inline-block transition-colors"
-            >
-              View All Logo Design Projects
-            </Link>
+          <div className="my-12">
+            <AutoImageSlider items={portfolioItems} />
           </div>
         </div>
       </section>
@@ -267,54 +184,15 @@ const LogoDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Brand Recognition</h3>
-                  <p className="text-gray-600">
-                    A distinctive logo helps customers recognize and remember your brand instantly.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Professional Image</h3>
-                  <p className="text-gray-600">
-                    A high-quality logo conveys professionalism and builds trust with your audience.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Brand Recognition" description="A distinctive logo helps customers recognize and remember your brand instantly." />
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Brand Differentiation</h3>
-                  <p className="text-gray-600">
-                    A unique logo helps you stand out from competitors and creates a distinct identity.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Professional Image" description="A high-quality logo conveys professionalism and builds trust with your audience." />
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="flex space-x-4">
-                <CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Consistent Brand Identity</h3>
-                  <p className="text-gray-600">
-                    A well-designed logo serves as the foundation for a consistent brand identity across all
-                    touchpoints.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Brand Differentiation" description="A unique logo helps you stand out from competitors and creates a distinct identity." />
+
+            <BenefitsOfWebDesignCard icon={<CheckCircle className="text-blue-600 w-6 h-6 flex-shrink-0" />} heading="Consistent Brand Identity" description="A well-designed logo serves as the foundation for a consistent brand identity across all touchpoints." />
+            
           </div>
         </div>
       </section>

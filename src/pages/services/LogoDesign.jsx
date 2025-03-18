@@ -18,60 +18,7 @@ import BenefitsOfWebDesignCard from "../../components/BenefitsOfWebDesignCard"
 
 const LogoDesign = () => {
 
-  const portfolioItems = [
-    {
-      image: image1,
-    },
-    {
-      image: image2,
-    },
-    {
-      image: image3,
-    },
-    {
-      image: image4,
-    },
-    {
-      image: image5,
-    },
-    {
-      image: image6,
-    },
-    {
-      image: image7,
-    },
-    {
-      image: image8,
-    },
-    {
-      image: image9,
-    },
-    {
-      image: image10,
-    },
-  ]
-
-  // Featured projects
-  const featuredProjects = [
-    {
-      title: "Tech Startup Logo",
-      image: "/placeholder.svg?height=600&width=800&text=Tech+Startup",
-      category: "Technology",
-      description: "Modern, minimalist logo design for a technology startup.",
-    },
-    {
-      title: "Real Estate Logo",
-      image: "/placeholder.svg?height=600&width=800&text=Real+Estate",
-      category: "Real Estate",
-      description: "Sophisticated logo design for a luxury real estate agency.",
-    },
-    {
-      title: "Organic Food Brand",
-      image: "/placeholder.svg?height=600&width=800&text=Organic+Food",
-      category: "Food & Beverage",
-      description: "Natural, earthy logo for an organic food company.",
-    },
-  ]
+  const portfolioItems = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10]
 
   return (
     <div>

@@ -1,7 +1,6 @@
-"use client"
-
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import ContactForm from "../components/ContactForm"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -91,7 +90,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-lg">
+            {/* <div className="bg-gray-50 p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h2>
               <form onSubmit={handleSubmit}>
                 <div className="space-y-6">
@@ -176,7 +175,8 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
+            <ContactForm />
           </div>
         </div>
       </section>

@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect, useRef } from "react"
 import { X } from "lucide-react"
 
@@ -17,59 +15,7 @@ export default function MultiItemSlider({ items = [] }) {
   const animationRef = useRef(null)
   const sliderContentRef = useRef(null)
 
-  // Default items if none provided
-  const defaultItems = [
-    {
-      id: 1,
-      image: "/placeholder.svg?height=300&width=400&text=Project+1",
-      title: "Project 1",
-      description: "Web Design & Development",
-      fullDescription:
-        "A complete web design and development project featuring responsive design, modern UI/UX principles, and optimized performance.",
-    },
-    {
-      id: 2,
-      image: "/placeholder.svg?height=300&width=400&text=Project+2",
-      title: "Project 2",
-      description: "E-commerce Solution",
-      fullDescription:
-        "A comprehensive e-commerce platform with secure payment processing, inventory management, and customer relationship tools.",
-    },
-    {
-      id: 3,
-      image: "/placeholder.svg?height=300&width=400&text=Project+3",
-      title: "Project 3",
-      description: "Corporate Website",
-      fullDescription:
-        "A professional corporate website designed to showcase the company's services, team, and values with a focus on brand consistency.",
-    },
-    {
-      id: 4,
-      image: "/placeholder.svg?height=300&width=400&text=Project+4",
-      title: "Project 4",
-      description: "Portfolio Website",
-      fullDescription:
-        "A creative portfolio website that highlights work samples, case studies, and achievements with an emphasis on visual presentation.",
-    },
-    {
-      id: 5,
-      image: "/placeholder.svg?height=300&width=400&text=Project+5",
-      title: "Project 5",
-      description: "Landing Page",
-      fullDescription:
-        "A high-converting landing page designed to capture leads and drive conversions with clear calls-to-action and persuasive content.",
-    },
-    {
-      id: 6,
-      image: "/placeholder.svg?height=300&width=400&text=Project+6",
-      title: "Project 6",
-      description: "Blog Website",
-      fullDescription:
-        "A content-focused blog platform with categories, search functionality, and social sharing capabilities to engage readers.",
-    },
-  ]
-
-  const sliderItems = items.length > 0 ? items : defaultItems
+  const sliderItems = items
 
   // Clone items for infinite scrolling - add clones at both beginning and end
   const extendedItems = [
@@ -333,17 +279,12 @@ export default function MultiItemSlider({ items = [] }) {
               data-item-index={index}
               onClick={!isDragging ? handleItemClick : undefined}
             >
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96 transition-transform hover:scale-[1.02] cursor-pointer">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-fit transition-transform hover:scale-[1.02] cursor-pointer">
                 <img
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.title}
+                  src={item || "/placeholder.svg"}
                   className="w-full h-full object-cover"
                   draggable="false" // Prevent image dragging
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </div>
               </div>
             </div>
           ))}
@@ -359,8 +300,7 @@ export default function MultiItemSlider({ items = [] }) {
           >
             <div className="relative">
               <img
-                src={selectedItem.image || "/placeholder.svg"}
-                alt={selectedItem.title}
+                src={selectedItem || "/placeholder.svg"}
                 className="w-full h-full md:h-full object-cover rounded-t-lg"
               />
               <button

@@ -1,8 +1,5 @@
 import { Users, Award, Coffee } from "lucide-react"
-import officeImg from "../assets/images/office-image.webp"
-import Person1 from "../assets/images/person1.jpeg"
-import Person2 from "../assets/images/peson2.jpeg"
-import Person3 from "../assets/images/person3.jpeg"
+import aboutImg from "../assets/images/about-image.jpg"
 import ValuesCard from "../components/ValuesCard"
 
 const About = () => {
@@ -22,25 +19,13 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <img src={officeImg} alt="Our Team" className="rounded-lg shadow-lg" />
+            <div className="md:w-1/3">
+              <img src={aboutImg} alt="Our Team" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
-              <p className="text-gray-600 mb-4">
-                Founded in 2015, DesignRavens began with a simple mission: to help businesses stand out through
-                exceptional design. What started as a small team of three passionate designers has grown into a
-                full-service design agency serving clients worldwide.
-              </p>
-              <p className="text-gray-600 mb-4">
-                We believe that great design is more than just aesthetics—it's about solving problems and creating
-                meaningful connections between brands and their audiences. This philosophy guides everything we do, from
-                logo creation to comprehensive website development.
-              </p>
-              <p className="text-gray-600">
-                Today, we're proud to have helped hundreds of businesses transform their digital presence and establish
-                strong brand identities that resonate with their target markets.
-              </p>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">OUR MISSION & VISION</h2>
+              <p className="text-gray-600 mb-4">At Design Ravens, our vision is to be a top provider of innovative and reliable software solutions that help businesses achieve their goals. We aim to create a future where technology makes life easier and where our software products have a positive impact on the world.</p>
+              <p className="text-gray-600 mb-4">Our mission is to deliver high-quality software that meets and exceeds our clients’ expectations. We do this by using the latest technologies, hiring the best talent, and encouraging a culture of innovation, teamwork, and excellence. We aim to build long-term relationships with our clients based on trust and respect, providing them with the support they need to succeed in a fast-changing digital world.</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,6 @@ import Contact from './pages/Contact.jsx'
 import WebDesign from './pages/services/WebDesign.jsx'
 import Portfolio from "./pages/Portfolio.jsx"
 import LogoDesign from './pages/services/LogoDesign.jsx'
-import Branding from './pages/services/Branding.jsx'
 
 const router = createBrowserRouter([
   {
@@ -50,10 +49,6 @@ const router = createBrowserRouter([
         path: "/services/logo-and-branding",
         element: <LogoDesign />
       },
-      {
-        path: "/services/branding",
-        element: <Branding />
-      }
     ]
   }
 ])

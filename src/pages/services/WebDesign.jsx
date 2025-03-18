@@ -21,38 +21,7 @@ import BenefitsOfWebDesignCard from "../../components/BenefitsOfWebDesignCard"
 
 const WebDesign = () => {
 
-  const portfolioItems = [
-    {
-      image: image1,
-    },
-    {
-      image: image2,
-    },
-    {
-      image: image3,
-    },
-    {
-      image: image4,
-    },
-    {
-      image: image5,
-    },
-    {
-      image: image6,
-    },
-    {
-      image: image7,
-    },
-    {
-      image: image8,
-    },
-    {
-      image: image9,
-    },
-    {
-      image: image10,
-    },
-  ]
+  const portfolioItems = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10]
 
   return (
     <div>

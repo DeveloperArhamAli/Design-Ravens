@@ -515,8 +515,8 @@ const Pricing = () => {
       {/* Hero Section */}
       <section className="bg-purple-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Transparent Pricing</h1>
-          <p className="text-xl max-w-3xl mx-auto text-purple-100">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Transparent Pricing</h1>
+          <p className="text-xl max-w-3xl mx-auto text-purple-100" data-aos="fade-up" data-aos-delay="200">
             Affordable design solutions tailored to fit your business needs and budget.
           </p>
         </div>
@@ -526,8 +526,8 @@ const Pricing = () => {
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Choose Your Plan</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Choose Your Plan</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               We offer flexible pricing options to accommodate businesses of all sizes.
             </p>
           </div>
@@ -538,7 +538,7 @@ const Pricing = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mx-auto" data-aos="zoom-in">
 
             {filteredProjects.map((filteredPkg) => (
               <PricingComponent name={filteredPkg.heading} price={filteredPkg.price} description={filteredPkg.description} features={filteredPkg.features} key={filteredPkg.id} />

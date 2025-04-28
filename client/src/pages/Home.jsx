@@ -44,13 +44,13 @@ const Home = () => {
       <section className="pb-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We offer a comprehensive range of design services to help your business thrive online.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
             <ServiceCard icon={<Monitor className="text-purple-600 w-12 h-12 mb-4" />} heading="Web Design" description="Rare Teck crafts visually stunning, user-friendly, and SEO-optimized custom websites tailored to your business needs." />
 
             <ServiceCard icon={<PenTool className="text-purple-600 w-12 h-12 mb-4" />} heading="Logo Design" description="Rare Teck delivers top-tier logo design and branding services, crafting unique identities that reflect clients' values and vision for lasting success." />
@@ -81,7 +81,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
 
             <WhyChooseUsCard icon={<CheckCircle className="text-purple-600 w-6 h-6 flex-shrink-0" />} heading="Expert Designers" description="Our team consists of experienced designers who are passionate about creating stunning visuals." />
 

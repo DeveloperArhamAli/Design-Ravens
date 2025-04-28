@@ -30,10 +30,10 @@ const WebDesign = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" data-aos="fade-up">
                 Web Design Services That Drive Results
               </h1>
-              <p className="text-xl mb-8 text-purple-100">
+              <p className="text-xl mb-8 text-purple-100" data-aos="fade-up" data-aos-delay="200">
                 We create beautiful, responsive websites that engage your visitors, reflect your brand, and convert
                 browsers into customers.
               </p>
@@ -67,13 +67,13 @@ const WebDesign = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Web Design Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Our Web Design Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               We offer comprehensive web design solutions tailored to your specific needs and business goals.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in">
 
             <ServiceCard icon={<Laptop className="text-purple-600 w-12 h-12 mb-4" />} heading="Stunning Web Design" description="We create visually appealing websites that captivate users and enhance your brand’s online presence." />
 
@@ -89,14 +89,14 @@ const WebDesign = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Web Design Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Our Web Design Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               We follow a structured approach to ensure every project is completed efficiently and meets your
               expectations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in">
 
             <ProcessCard stepNumber="01" stepTitle="Initial Phase" stepDescription="We define goals, research the market, set timelines, and allocate roles to ensure a smooth project execution." />
 
@@ -112,8 +112,8 @@ const WebDesign = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Featured Web Design Projects</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Featured Web Design Projects</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Take a look at some of our recent web design work that showcases our expertise and creativity.
             </p>
           </div>
@@ -129,13 +129,13 @@ const WebDesign = () => {
       <section className="py-20 bg-purple-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Benefits of Professional Web Design</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Benefits of Professional Web Design</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               A well-designed website offers numerous advantages for your business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="zoom-in" data-aos-delay="300">
 
             <BenefitsOfWebDesignCard icon={<CheckCircle className="text-purple-600 w-6 h-6 flex-shrink-0" />} heading="Enhanced Brand Credibility" description="A professional website builds trust with your audience and establishes your brand as credible and reliable." />
 

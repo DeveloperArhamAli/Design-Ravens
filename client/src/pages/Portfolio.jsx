@@ -53,8 +53,8 @@ const Portfolio = () => {
     <div>
       <section className="bg-purple-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Portfolio</h1>
-          <p className="text-xl max-w-3xl mx-auto text-purple-100">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Our Portfolio</h1>
+          <p className="text-xl max-w-3xl mx-auto text-purple-100" data-aos="fade-up" data-aos-delay="200">
             Explore our collection of work that showcases our creativity, expertise, and commitment to excellence.
           </p>
         </div>
@@ -75,13 +75,13 @@ const Portfolio = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Client Testimonials</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Client Testimonials</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Don't just take our word for it. Here's what our clients have to say about our work.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" data-aos="zoom-in" data-aos-delay="400">
 
             <TestimonialCard testimonial="I'm so happy with my logo it looks so cool I really loved how Emma Hemmingway did her best to leave this logo perfect. I recommend her and I will definitely come back and ask for her again." name="Jose Flores" designation="Owner" />
 

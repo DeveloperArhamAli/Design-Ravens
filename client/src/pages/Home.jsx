@@ -16,10 +16,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/70 -z-10" />
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mt-46">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">
                 Elevate Your Brand with Stunning Design Solutions
               </h1>
-              <p className="text-xl mb-8">
+              <p className="text-xl mb-8" data-aos="fade-up" data-aos-delay="200">
                 We create beautiful websites and logos that help your business stand out in the digital landscape.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -44,8 +44,8 @@ const Home = () => {
       <section className="pb-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-aos="fade-up">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up">
               We offer a comprehensive range of design services to help your business thrive online.
             </p>
           </div>

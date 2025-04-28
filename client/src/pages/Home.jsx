@@ -10,16 +10,17 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="text-white py-20">
-        <div className="absolute inset-0 -z-10 overflow-hidden blur-xs">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
           <video src={bgVideo} autoPlay loop muted className="w-full h-full object-cover"></video>
         </div>
+        <div className="absolute inset-0 bg-black/70 -z-10" />
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
+            <div className="md:w-2/3 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
                 Elevate Your Brand with Stunning Design Solutions
               </h1>
-              <p className="text-xl mb-8 text-black bg-white/40 rounded p-2">
+              <p className="text-xl mb-8">
                 We create beautiful websites and logos that help your business stand out in the digital landscape.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

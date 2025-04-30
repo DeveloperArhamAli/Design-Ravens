@@ -3,14 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Services from './pages/Services.jsx'
-import Pricing from './pages/Pricing.jsx'
-import Contact from './pages/Contact.jsx'
-import WebDesign from './pages/services/WebDesign.jsx'
-import Portfolio from "./pages/Portfolio.jsx"
-import LogoDesign from './pages/services/LogoDesign.jsx'
+import HomePage from './pages/HomePage.jsx'
+import AboutUsPage from './pages/AboutUsPage.jsx'
+import ServicesPage from './pages/ServicesPage.jsx'
+import PricingPage from './pages/PricingPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
+import PortfolioPage from "./pages/PortfolioPage.jsx"
 
 const router = createBrowserRouter([
   {
@@ -19,35 +17,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <HomePage />
       },
       {
         path: "/about",
-        element: <About />
+        element: <AboutUsPage />
       },
       {
         path: "/services",
-        element: <Services />
+        element: <ServicesPage />
       },
       {
         path: "/pricing",
-        element: <Pricing />
+        element: <PricingPage />
       },
       {
         path: "/contact",
-        element: <Contact />
+        element: <ContactPage />
       },
       {
         path: "/portfolio",
-        element: <Portfolio />
-      },
-      {
-        path: "/services/web-design",
-        element: <WebDesign />
-      },
-      {
-        path: "/services/logo-and-branding",
-        element: <LogoDesign />
+        element: <PortfolioPage />
       },
     ]
   }

@@ -1,15 +1,11 @@
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
 import { Outlet } from "react-router-dom"
-import Layout from "./components/Layout"
-import Aos from "aos"
-import "aos/dist/aos.css"
-Aos.init()
+import { Navbar, Footer, Layout, CursorFollower } from "./components/index"
 
 function App() {
     return (
       <div>
         <Navbar />
+        <CursorFollower />
         <Layout>
           <Outlet />
         </Layout>

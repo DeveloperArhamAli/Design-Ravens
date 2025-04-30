@@ -1,38 +1,20 @@
-import { useState, useEffect, useRef, Children } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X, ChevronDown } from 'lucide-react'
-import Logo from "./Logo"
+import { useState, useEffect } from "react";
+import { Menu, X, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const servicesRef = useRef(null)
-  const location = useLocation()
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen)
-  }
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
-        setIsServicesOpen(false)
-      }
-    }
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
-
-  useEffect(() => {
-    setIsServicesOpen(false)
-  }, [location])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     {
@@ -44,8 +26,8 @@ const Navbar = () => {
       slug: "/about",
     },
     {
-      slug: "#",
-      dropdown: true,
+      name: "Services",
+      slug: "/services",
     },
     {
       name: "Portfolio",
@@ -62,88 +44,61 @@ const Navbar = () => {
   ]
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          <Logo />
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navLinks.map((navLink) => (
-              <div key={navLink.slug}>
-                <Link to={navLink.slug} className="text-gray-700 hover:text-purple-600 font-medium transition-colors">{navLink.name}</Link>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrollY > 50 ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto flex items-center justify-between h-20 px-4 md:px-6">
+        <Logo />
 
-                {navLink.dropdown && (
-                  <div className="relative" ref={servicesRef}>
-                  <button 
-                    onClick={toggleServices}
-                    className="text-gray-700 hover:text-purple-600 font-medium transition-colors flex items-center"
-                  >
-                    Services <ChevronDown size={16} className={`ml-1 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  
-                  {isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
-                      <div className="py-1">
-                        <Link to="/services/web-design" className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600">Web Design</Link>
-                        <Link to="/services/logo-and-branding" className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600">Logo and Branding</Link>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                )}
-              </div>
-            ))}
-
-          </nav>
-
-          <div className="hidden md:block">
-            <Link
-              to="/contact"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium transition-colors"
-            >
-              Get Started
+        <nav className="hidden lg:flex items-center space-x-8">
+          {navLinks.map((navlink) => (
+            <Link key={navlink.slug} to={navlink.slug} className="text-white/70 hover:text-cyan-400 transition-colors text-sm font-medium relative group">
+              {navlink.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full shadow-[0_0_5px_1px_rgba(34,211,238,0.6)]"></span>
             </Link>
-          </div>
+          ))}
+        </nav>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-700" onClick={toggleMenu}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        <Link to="/contact" className="hidden lg:flex">
+          <button className="hidden md:flex bg-transparent hover:bg-white/5 text-white border border-white/10 hover:border-cyan-400/50 rounded-full px-6 py-2 cursor-pointer group transition-all duration-300">
+            <span>Get Started</span>
+            <span className="ml-2 size-5 flex items-center justify-center rounded-full bg-cyan-400 text-black group-hover:bg-white transition-colors">
+              <ChevronRight className="size-3" />
+            </span>
           </button>
-        </div>
+        </Link>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 space-y-1">
-            <Link to="/" className="block text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors" onClick={toggleMenu} >Home</Link>
-            <Link to="/about"className="block text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors" onClick={toggleMenu}>About Us</Link>
-            
-            {/* Mobile Services Dropdown */}
-            <div>
-              <button 
-                onClick={toggleServices}
-                className="flex items-center justify-between w-full text-left text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors"
-              >
-                <span>Services</span>
-                <ChevronDown size={16} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isServicesOpen && (
-                <div className="pl-4 mt-1 space-y-1 border-l-2 border-purple-100">
-                  <Link to="/services/web-design" className="block text-gray-700 hover:text-purple-600 py-2 transition-colors" onClick={toggleMenu} >Web Design</Link>
-                  <Link to="/services/logo-design" className="block text-gray-700 hover:text-purple-600 py-2 transition-colors" onClick={toggleMenu}>Logo and Branding</Link>
-                </div>
-              )}
-            </div>
-            
-            <Link to="/portfolio" className="block text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors" onClick={toggleMenu}>Portfolio</Link>
-            <Link to="/pricing" className="block text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors" onClick={toggleMenu}>Pricing</Link>
-            <Link to="/contact" className="block text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors" onClick={toggleMenu}>Contact</Link>
-            <Link to="/contact" className="block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium text-center transition-colors mt-2" onClick={toggleMenu}>Get Started</Link>
-          </nav>
-        )}
+        <button className="lg:hidden z-50 text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X className="h-6 w-6 cursor-pointer" /> : <Menu className="h-6 w-6 cursor-pointer" />}
+        </button>
       </div>
-    </header>
-  )
-}
 
-export default Navbar
+      {isMenuOpen && (
+        <div className="lg:hidden inset-0 bg-[#050816]  z-40 flex flex-col items-center justify-center h-screen w-full">
+          <nav className="flex flex-col items-center space-y-8">
+            {navLinks.map((navlink) => (
+              <Link
+                key={navlink.slug}
+                to={navlink.slug}
+                className="text-white/80 hover:text-cyan-400 transition-colors text-xl font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {navlink.name}
+              </Link>
+            ))}
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <button className="bg-transparent hover:bg-white/5 text-white border border-white/10 hover:border-cyan-400/50 rounded-full px-6 py-3 cursor-pointer mt-4 group transition-all duration-300 flex items-center">
+                <span>Get Started</span>
+                <span className="ml-2 size-5 flex items-center justify-center rounded-full bg-cyan-400 text-black group-hover:bg-white transition-colors">
+                  <ChevronRight className="size-3" />
+                </span>
+              </button>
+            </Link>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}

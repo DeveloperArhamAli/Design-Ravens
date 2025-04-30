@@ -1,9 +1,9 @@
 import { useState } from "react"
 import Input from "./Input"
 import { useForm } from "react-hook-form"
-import Button from "./Button"
 import { useRef } from "react"
 import emailjs from '@emailjs/browser';
+import { Send } from "lucide-react"
 
 function ContactForm() {
     const { register, handleSubmit } = useForm()
@@ -31,7 +31,7 @@ function ContactForm() {
             .sendForm(
                 import.meta.env.VITE_SERVICE_ID,
                 import.meta.env.VITE_TEMPLATE_ID,
-                form.current, // Ensure form.current exists
+                form.current,
                 { publicKey: import.meta.env.VITE_PUBLIC_KEY }
             )
             .then(() => {
@@ -48,39 +48,46 @@ function ContactForm() {
     };    
     
 return (
-    <div className="bg-gray-50 p-8 rounded-lg">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h2>
+    <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 h-full">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">Get in touch</h2>
+        <p className="text-white/70 mb-8">Fill out the form and our team will get back to you within 24 hours.</p>
+
         {error && <p className="text-red-600 mb-2 text-center">{error}</p>}
+
         {success && <p className="text-green-600 mb-2 text-center">{success}</p>}
-        <form onSubmit={handleSubmit(contact)} ref={form}>
-            <div className="space-y-6">
-                <Input label="Your Name " type="text" {...register("name", {
+
+        <form onSubmit={handleSubmit(contact)} ref={form} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input label="Name " type="text" placeholder="Your name" {...register("name", {
                     required: true,
                 })}/>
 
-                <Input label="Your Email " type="email" {...register("email", {
+                <Input label="Email " type="email" placeholder="Your email" {...register("email", {
                     required: true,
                     validate: {
                         matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) || "Email address must be a valid address"}
                 })}/>
 
-                <Input label="Phone Number " type="number" {...register("phoneNumber", {
+                <Input label="Phone Number " type="number" placeholder="Your phone number" {...register("phoneNumber", {
                     required: true,
                 })}/>
 
-                <Input label="Subject " type="text" {...register("subject", {
+            </div>
+                <Input label="Subject " className="w-full" type="text" placeholder="How can we help?" {...register("subject", {
                     required: true,
                 })}/>
 
                 <div className="flex flex-col">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message *</label>
-                    <textarea id="message" name="message" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows={5} {...register("message", {
+                    <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-cyan-400/50 focus:ring-cyan-400/20 px-3 py-2 rounded-xl" rows={5} {...register("message", {
                         required: true
                         })}/>
                 </div>
 
-                <Button children="Send Message" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-md font-medium transition-colors flex items-center justify-center" type="submit" id="sendMessageButton" disabled={disabled} />
-            </div>
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white rounded-full py-3 shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 flex items-center justify-center text-lg cursor-pointer" type="submit" id="sendMessageButton">
+                    Send Message
+                    <Send className="ml-2 h-5 w-5" />
+                </button>
         </form>
     </div>
 )}

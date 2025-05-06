@@ -4,8 +4,8 @@ function TeamMemberCard({
     keyProp,
     name,
     designation,
-    description,
-    image
+    image,
+    profileLink,
 }) {
     return (
         <motion.div key={keyProp} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: keyProp * 0.1 }} viewport={{ once: true }} className="group">
@@ -18,7 +18,7 @@ function TeamMemberCard({
                 <div className="p-6">
                     <h3 className="text-xl font-bold mb-1">{name}</h3>
                     <p className="text-cyan-400 text-sm mb-4">{designation}</p>
-                    <p className="text-white/70 text-sm">{description}</p>
+                    <a href={profileLink} target='_blank' className='bg-white text-[#050816] hover:bg-white/90 rounded-full flex items-center px-3 py-2 cursor-pointer justify-center'>View Profile</a>
                 </div>
             </div>
         </motion.div>

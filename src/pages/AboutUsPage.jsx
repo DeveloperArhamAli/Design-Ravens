@@ -1,6 +1,10 @@
 import { motion } from "framer-motion"
 import { Users, Award, Clock } from "lucide-react"
 import { PageHeader, TextOverlay, Button, CallToAction, ValuesCard, TeamMemberCard } from "../components/index"
+import RyanHansen from "../assets/images/ryan hansen.jpg"
+import Henryjames from "../assets/images/henry james.jpg"
+import Davidrichard from "../assets/images/david richard.jpg"
+import Markhenry from "../assets/images/mark henry.jpg"
 
 export default function AboutUsPage() {
   const values = [
@@ -26,28 +30,28 @@ export default function AboutUsPage() {
 
   const members = [
     {
-      name: "John Doe",
-      designation: "CEO",
-      description: "John is the visionary behind RARE TECK, leading the team with passion and expertise.",
-      image: "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+      name: "Ryan Hansen",
+      designation: "Graphic/ web designer",
+      image: RyanHansen,
+      profileLink: "https://www.facebook.com/profile.php?id=100078446056438&mibextid=wwXIfr&rdid=sY7KJZrmDuE0Q6zt&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16B9rr4VDM%2F%3Fmibextid%3DwwXIfr"
     },
     {
-      name: "Jane Smith",
-      designation: "CTO",
-      description: "Jane is the technical mastermind, ensuring our projects are built on solid foundations.",
-      image: "https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?semt=ais_hybrid&w=740"
+      name: "Henry james",
+      designation: "Graphic/ web designer",
+      image: Henryjames,
+      profileLink: "https://www.facebook.com/profile.php?id=100079564993697&mibextid=wwXIfr&rdid=gwbbdK2aT6v4lUaZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15MvNJJj41%2F%3Fmibextid%3DwwXIfr"
     },
     {
-      name: "Alice Johnson",
-      designation: "Designer",
-      description: "Alice is our creative genius, crafting stunning designs that captivate audiences.",
-      image: "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg?semt=ais_hybrid&w=740"
+      name: "David richard",
+      designation: "Web developer",
+      image: Davidrichard,
+      profileLink: "https://www.facebook.com/profile.php?id=100077279617008&mibextid=wwXIfr&rdid=ewM5Zn6P0cCuS3Pq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Ae1BK6qvE%2F%3Fmibextid%3DwwXIfr"
     },
     {
-      name: "Bob Brown",
-      designation: "Developer",
-      description: "Bob is our coding wizard, turning designs into functional and beautiful websites.",
-      image: "https://www.wikihow.com/images/thumb/9/90/What_type_of_person_are_you_quiz_pic.png/1200px-What_type_of_person_are_you_quiz_pic.png"
+      name: "Mark henry",
+      designation: "Graphic designer",
+      image: Markhenry,
+      profileLink: "https://www.facebook.com/mark.henry.147720?mibextid=wwXIfr&rdid=g9OTGxlCo3JYkckM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18hGnFHyqW%2F%3Fmibextid%3DwwXIfr"
     }
   ]
   

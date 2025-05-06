@@ -53,11 +53,11 @@ export default function HomePage() {
       label: "Projects Completed"
     },
     {
-      number: "50+",
+      number: "197+",
       label: "Happy Clients"
     },
     {
-      number: "15+",
+      number: "100+",
       label: "Design Awards"
     },
   ]

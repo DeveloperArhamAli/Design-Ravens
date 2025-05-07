@@ -90,16 +90,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-12 relative">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 overflow-hidden">
-            <div className="aspect-[21/9] rounded-xl flex items-center justify-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d904.7255585525897!2d67.11523248710249!3d24.901316224266754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33922488f3725%3A0x3bfde63eb356ebc0!2sMillennium%20Mall!5e0!3m2!1sen!2sus!4v1745998468548!5m2!1sen!2sus" className="w-full h-full" style={{border:0}} referrerPolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CallToAction 
         title="Ready to Start Your Project?"
         description="Let's collaborate to create stunning designs that elevate your brand and help you stand out in the digital landscape."

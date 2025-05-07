@@ -1,43 +1,43 @@
-import { Code, Globe, Layers, LineChart, Zap, Cpu } from "lucide-react"
 import { Link } from "react-router-dom"
+import { Code, PencilRuler, Palette, Megaphone, Search, Smartphone } from "lucide-react"
 import { PageHeader, TextOverlay, Button, CallToAction, ServiceCard, ProcessCard, TestimonialSlider  } from "../components/index"
 
 export default function ServicesPage() {
   const services = [
     {
-      icon: <Code className="size-6" />,
-      title: "Web Development",
-      description: "Custom websites built with cutting-edge technologies for optimal performance.",
+      icon: <PencilRuler className="size-6" />,
+      title: "Logo Design",
+      description: "Unique and memorable logos that define your brand’s visual identity.",
       color: "from-cyan-500 to-cyan-700",
     },
     {
-      icon: <Globe className="size-6" />,
-      title: "UI/UX Design",
-      description: "Intuitive interfaces that enhance user experience and drive engagement.",
+      icon: <Code className="size-6" />,
+      title: "Web development",
+      description: "Custom websites built with cutting-edge technologies for optimal performance.",
       color: "from-purple-500 to-purple-700",
     },
     {
-      icon: <Layers className="size-6" />,
-      title: "Brand Identity",
-      description: "Distinctive visual identities that capture your brand's essence.",
+      icon: <Palette className="size-6" />,
+      title: "Brand identity",
+      description: "Cohesive brand strategies that communicate your values and captivate your audience.",
       color: "from-cyan-500 to-purple-700",
     },
     {
-      icon: <LineChart className="size-6" />,
+      icon: <Megaphone className="size-6" />,
       title: "Digital Marketing",
-      description: "Strategic campaigns that increase visibility and drive conversions.",
+      description: "Data-driven campaigns to grow your online presence and boost conversions.",
       color: "from-purple-500 to-cyan-700",
     },
     {
-      icon: <Zap className="size-6" />,
-      title: "App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
+      icon: <Search className="size-6" />,
+      title: "SEO Services",
+      description: "Optimized content and strategies to increase your search engine rankings organically.",
       color: "from-cyan-500 to-cyan-700",
     },
     {
-      icon: <Cpu className="size-6" />,
-      title: "Tech Consulting",
-      description: "Expert guidance on technology solutions and digital transformation.",
+      icon: <Smartphone className="size-6" />,
+      title: "App development",
+      description: "Intuitive and scalable mobile apps tailored to your business goals.",
       color: "from-purple-500 to-purple-700",
     },
   ]
